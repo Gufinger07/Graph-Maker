@@ -1,0 +1,10 @@
+.formulario {
+    display: flex;
+    flex-direction: column;
+}
+
+
+
+.input-formulario {
+    display: flex;
+}
