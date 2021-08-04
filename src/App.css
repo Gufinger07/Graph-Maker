@@ -1,0 +1,13 @@
+@media screen and (min-width: 0) {
+    .conteudo {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    
+}
+@media screen and (min-width: 500px) {
+    .grafico {
+        border: 0.25rem double black;
+    }
+}

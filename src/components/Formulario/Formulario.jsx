@@ -36,16 +36,17 @@ function Formulario() {
         className="formulario"
       >
         <TextField
-            name="titulo"
-            onChange={(event) => {
-              setOptions({ title: event.target.value})
-            }}
-            id="outlined-basic"
-            label="Título do Gráfico"
-            variant="outlined"
-            margin="normal"
-            type="text"
-          />
+          name="titulo"
+          onChange={(event) => {
+            setOptions({ title: event.target.value });
+          }}
+          id="outlined-basic"
+          label="Título do Gráfico"
+          variant="outlined"
+          margin="normal"
+          type="text"
+          required
+        />
         <div className="input-formulario">
           <TextField
             name="item1"
@@ -58,6 +59,7 @@ function Formulario() {
             variant="outlined"
             margin="normal"
             type="text"
+            required
           />
           <TextField
             name="quantidade1"
@@ -70,6 +72,7 @@ function Formulario() {
             variant="outlined"
             margin="normal"
             type="number"
+            required
           />
         </div>
         <div className="input-formulario">
@@ -78,7 +81,6 @@ function Formulario() {
             value={item2}
             onChange={(event) => {
               setItem2(event.target.value);
-              console.log(item2);
             }}
             id="outlined-basic"
             label="Item 2"
@@ -125,14 +127,19 @@ function Formulario() {
             type="number"
           />
         </div>
-        <Button type="submit" variant="outlined" color="primary">
+        <Button
+          margin="normal"
+          type="submit"
+          variant="outlined"
+          color="primary"
+        >
           Criar Gráfico
         </Button>
       </form>
-      <div>
+      <div className="grafico">
         <Chart
-          width={"500px"}
-          height={"300px"}
+          width={"24.063rem"}
+          height={"25rem"}
           chartType="PieChart"
           data={data}
           options={options}

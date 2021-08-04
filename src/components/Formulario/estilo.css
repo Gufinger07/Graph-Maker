@@ -3,8 +3,10 @@
     flex-direction: column;
 }
 
-
-
 .input-formulario {
     display: flex;
+}
+
+.grafico {
+    margin-top: 1rem;
 }
